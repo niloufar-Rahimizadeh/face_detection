@@ -1,0 +1,53 @@
+What Is Face Detection?
+Face detection is a type of computer vision technology that is able to identify people’s 
+faces within digital images.  This is very easy for humans, but computers need precise 
+instructions. The images might contain many objects that aren’t human faces, like 
+buildings, cars, animals, and so on.
+* It is distinct from other computer vision technologies that involve human faces, like 
+facial recognition, analysis, and tracking.
+Facial recognition involves identifying the face in the image as belonging to person X 
+and not person Y. It is often used for biometric purposes, like unlocking your smartphone.
+Facial analysis tries to understand something about people from their facial features, 
+like determining their age, gender, or the emotion they are displaying.
+Facial tracking is mostly present in video analysis and tries to follow a face and its 
+features (eyes, nose, and lips) from frame to frame. The most popular applications are 
+various filters available in mobile apps like Snapchat.
+
+* How Do Computers “See” Images?
+
+The smallest element of an image is called a pixel, or a picture element. It is basically 
+a dot in the picture. An image contains multiple pixels arranged in rows and columns.
+You will often see the number of rows and columns expressed as the image resolution.
+For example, an Ultra HD TV has the resolution of 3840x2160, meaning it is 3840 pixels 
+wide and 2160 pixels high.
+But a computer does not understand pixels as dots of color. It only understands numbers. 
+To convert colors to numbers, the computer uses various color models.
+
+In color images, pixels are often represented in the RGB color model.RGB stands for Red 
+Green Blue. Each pixel is a mix of those three colors. RGB is great at modeling all the 
+colors humans perceive by combining various amounts of red, green, and blue.
+Since a computer only understand numbers, every pixel is represented by three numbers, 
+corresponding to the amounts of red, green, and blue present in that pixel.
+In grayscale (black and white) images, each pixel is a single number, representing 
+the amount of light, or intensity, it carries. 
+In many applications, the range of intensities is from 0 (black) to 255 (white).
+Everything between 0 and 255 is various shades of gray.
+If each grayscale pixel is a number, an image is nothing more than a matrix (or table) 
+of numbers.
+In color images, there are three such matrices representing the red, green, and blue 
+channels.
+What Are Features?
+A feature is a piece of information in an image that is relevant to solving a certain 
+problem. It could be something as simple as a single pixel value, or more complex like
+edges, corners, and shapes. You can combine multiple simple features into a complex 
+feature.
+Applying certain operations to an image produces information that could be considered 
+features as well. Computer vision and image processing have a large collection of useful 
+features and feature extracting operations.
+Basically, any inherent or derived property of an image could be used as a feature to 
+solve tasks.
+You will need three libraries:
+
+1. scikit-image
+2. scikit-learn
+3. opencv
