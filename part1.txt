@@ -52,15 +52,29 @@ You will need three libraries:
 2. scikit-learn
 3. opencv
 Viola-Jones Object Detection Framework
-This algorithm is named after two computer vision researchers who proposed the method in 2001: Paul Viola and Michael Jones.
-The Viola-Jones algorithm has 4 main steps, and you’ll learn more about each of them in the sections that follow:
+This algorithm is named after two computer vision researchers who proposed the method in 
+2001: Paul Viola and Michael Jones. The Viola-Jones algorithm has 4 main steps, and you’ll 
+learn more about each of them in the sections that follow:
 1.Selecting Haar-like features
 2.Creating an integral image
 3.Running AdaBoost training
 4.Creating classifier cascades
-Given an image, the algorithm looks at many smaller subregions and tries to find a face by looking for specific features in each subregion.
-It needs to check many different positions and scales because an image can contain many faces of various sizes.Viola and Jones used Haar-like features to detect faces.
+Given an image, the algorithm looks at many smaller subregions and tries to find a face 
+by looking for specific features in each subregion.It needs to check many different
+positions and scales because an image can contain many faces of various sizes.Viola and 
+Jones used Haar-like features to detect faces.
 * Haar-Like Features
-All human faces share some similarities. If you look at a photograph showing a person’s face, you will see, for example, that the eye region is darker than the bridge of the nose. The cheeks are also brighter than the eye region. We can use these properties to help us understand if an image contains a human face.
-A simple way to find out which region is lighter or darker is to sum up the pixel values of both regions and comparing them. 
+All human faces share some similarities. If you look at a photograph showing a person’s 
+face, you will see, for example, that the eye region is darker than the bridge of the nose. 
+The cheeks are also brighter than the eye region. We can use these properties to help us 
+understand if an image contains a human face.
+A simple way to find out which region is lighter or darker is to sum up the pixel values 
+of both regions and comparing them. 
+The sum of pixel values in the darker region will be smaller than the sum of pixels in 
+the lighter region. This can be accomplished using Haar-like features.
+A Haar-like feature is represented by taking a rectangular part of an image and dividing 
+that rectangle into multiple parts. They are often visualized as black and white adjacent 
+rectangles:
+
+
 
